@@ -15,12 +15,11 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.4.3.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
     <scm>
-        <connection>scm:git:https://github.beescloud.com/acme-widgets-inc-supply-chain/supply-chain-portal.git
-        </connection>
+        <connection>scm:git:https://github.beescloud.com/acme-widgets-inc-supply-chain/supply-chain-portal.git</connection>
         <url>https://github.beescloud.com/acme-widgets-inc-supply-chain/supply-chain-portal</url>
     </scm>
 
@@ -28,6 +27,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <!--
+        See http://maven.apache.org/maven-release/maven-release-plugin/faq.html#credentials
+        -->
+        <project.scm.id>github.beescloud.com</project.scm.id>
     </properties>
 
     <dependencies>
