@@ -4,7 +4,7 @@
 
     <groupId>com.acmewidgets.supplychain</groupId>
     <artifactId>supplychain-portal</artifactId>
-    <version>0.0.12</version>
+    <version>0.0.13-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>supplychain-portal</name>
@@ -20,7 +20,7 @@
     <scm>
         <connection>scm:git:https://github.beescloud.com/acme-widgets-inc-supply-chain/supply-chain-portal.git</connection>
         <url>https://github.beescloud.com/acme-widgets-inc-supply-chain/supply-chain-portal</url>
-      <tag>supplychain-portal-0.0.12</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <properties>
