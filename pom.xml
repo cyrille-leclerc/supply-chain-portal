@@ -4,7 +4,7 @@
 
     <groupId>com.acmewidgets.supplychain</groupId>
     <artifactId>supplychain-portal</artifactId>
-    <version>0.0.19-SNAPSHOT</version>
+    <version>0.0.19</version>
     <packaging>war</packaging>
 
     <name>supplychain-portal</name>
@@ -14,13 +14,13 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.3.RELEASE</version>
-        <relativePath/>
+        <relativePath />
     </parent>
 
     <scm>
         <connection>scm:git:https://github.beescloud.com/acme-widgets-inc-supply-chain/supply-chain-portal.git</connection>
         <url>https://github.beescloud.com/acme-widgets-inc-supply-chain/supply-chain-portal</url>
-      <tag>HEAD</tag>
+      <tag>supplychain-portal-0.0.19</tag>
   </scm>
 
     <properties>
