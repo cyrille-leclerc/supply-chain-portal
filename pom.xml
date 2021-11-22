@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.acmewidgets.supplychain</groupId>
+    <groupId>com.mycompany.supplychain</groupId>
     <artifactId>supplychain-portal</artifactId>
     <version>0.0.21-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>supplychain-portal</name>
-    <description>Acme Widgets Supply Chain Portal</description>
+    <description>Supply Chain Portal</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -18,8 +18,8 @@
     </parent>
 
     <scm>
-        <connection>scm:git:https://github.beescloud.com/acme-widgets-inc-supply-chain/supply-chain-portal.git</connection>
-        <url>https://github.beescloud.com/acme-widgets-inc-supply-chain/supply-chain-portal</url>
+        <connection>scm:git:https://github.com/cyrille-leclerc/supply-chain-portal.git</connection>
+        <url>https://github.com/cyrille-leclerc/supply-chain-portal</url>
       <tag>HEAD</tag>
   </scm>
 
@@ -58,15 +58,12 @@
                 <version>2.5.3</version>
             </plugin>
         </plugins>
+            <extensions>
+      <extension>
+          <groupId>io.opentelemetry.contrib</groupId>
+          <artifactId>opentelemetry-maven-extension</artifactId>
+          <version>1.7.0-alpha</version>
+      </extension>
+    </extensions>
     </build>
-    <distributionManagement>
-        <snapshotRepository>
-            <id>nexus.beescloud.com</id>
-            <url>https://nexus.beescloud.com/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>nexus.beescloud.com</id>
-            <url>https://nexus.beescloud.com/content/repositories/releases/</url>
-        </repository>
-    </distributionManagement>
 </project>
