@@ -1,12 +1,22 @@
-node ('linux') {
-    checkout scm
-    stage('Build') {
-        sh './mvnw verify'
+pipeline {
+    agent {
+      label 'linux'
     }
-    stage('Integration Test') {
-        sh 'sleep 12'
-    }
-    stage('Deploy') {
-        sh 'sleep 5'
+    stages {
+        stage('Build') {
+            steps {
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'docker.io',
+                        passwordVariable: 'CONTAINER_REGISTRY_PASSWORD',
+                        usernameVariable: 'CONTAINER_REGISTRY_USERNAME')]) {
+
+                    sh (
+                    label: 'mvn deploy spring-boot:build-image',
+                    script: 'export OTEL_TRACES_EXPORTER="otlp" && ./mvnw deploy spring-boot:build-image')
+                    archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+                }
+            }
+        }
     }
 }

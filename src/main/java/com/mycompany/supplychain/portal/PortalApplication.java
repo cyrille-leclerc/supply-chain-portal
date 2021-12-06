@@ -1,12 +1,13 @@
-package com.acmewidgets.supplychain;
+package com.mycompany.supplychain.portal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SupplychainPortalApplication {
+public class PortalApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SupplychainPortalApplication.class, args);
+		SpringApplication.run(PortalApplication.class, args);
 	}
+
 }
